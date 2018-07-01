@@ -2,13 +2,18 @@ const functions = require('./functions/functions');
 const init = require('./init.js')
 const schedule = require('node-schedule');
 
-
+//start the rule to iterate the bot call
 var rule = new schedule.RecurrenceRule();
 
-//job start every hour at minute 0, second3 (in order to have a bit of room regarding possible api response delay)
-// rule.minute = 0; 
+//bot start every hour at minute 0, second3 (in order to have a bit of room regarding possible api response delay)
+rule.minute = 0; 
 rule.second = 3;
 
+/**
+ * schedule.scheduleJob function iterate the bot call following the rule schedule
+ * @argument rule: object
+ * @returns void 
+ */
 schedule.scheduleJob(rule, function(){
 
     var ema = []; ema.short = []; ema.long = [];
