@@ -3,13 +3,13 @@ const init = require('./init.js')
 const schedule = require('node-schedule');
 
 
-// var rule = new schedule.RecurrenceRule();
+var rule = new schedule.RecurrenceRule();
 
-// //job start every hour at minute 0, second3 (in order to have a bit of room regarding possible api response delay)
+//job start every hour at minute 0, second3 (in order to have a bit of room regarding possible api response delay)
 // rule.minute = 0; 
-// rule.second = 3;
+rule.second = 3;
 
-// schedule.scheduleJob(rule, function(){
+schedule.scheduleJob(rule, function(){
 
     var ema = []; ema.short = []; ema.long = [];
     functions.getCandles(init.pair.bitcoin, init.sizeOfCandles["1h"])
@@ -44,4 +44,4 @@ const schedule = require('node-schedule');
 
     }).catch(err=>console.log("something went wrong..." + err));
 
-// });
+});
