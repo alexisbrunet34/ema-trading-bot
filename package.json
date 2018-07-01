@@ -1,0 +1,24 @@
+{
+  "name": "ema-trading-bot",
+  "version": "1.0.0",
+  "description": "cryptomoney trading bot using exponential moving average strategy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexisbrunet34/ema-trading-bot.git"
+  },
+  "author": "Alexis Brunet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexisbrunet34/ema-trading-bot/issues"
+  },
+  "homepage": "https://github.com/alexisbrunet34/ema-trading-bot#readme",
+  "dependencies": {
+    "node-schedule": "^1.3.0",
+    "request": "^2.87.0",
+    "require": "^2.4.20"
+  }
+}
